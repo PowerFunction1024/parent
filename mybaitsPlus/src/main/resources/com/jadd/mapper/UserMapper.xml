@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace属性: 接口类的全限定名-->
+<mapper namespace="com.jadd.mapper.UserMapper">
+
+
+<select id="selectByCondition" resultType="com.jadd.been.User" parameterType="com.jadd.been.User">
+    SELECT  *  FROM  user u
+    <where>
+        <if test="user.name!=null and user.name!=''">
+           AND u.name LIKE  concat("%",#{user.name},"%")
+        </if>
+        <if test="user.age!=null">
+           and u.age = #{user.age}
+        </if>
+    </where>
+</select>
+</mapper>
