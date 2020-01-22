@@ -26,6 +26,9 @@ public class TestValid {
 
     @PostMapping
     public User create02 (@RequestBody @Valid User user) {
+
+
+
         System.out.println(user.getId());
         System.out.println(user.getPassword());
         user.setId("1");
