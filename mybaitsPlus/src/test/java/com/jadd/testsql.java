@@ -43,4 +43,15 @@ public class testsql {
 
 
     }
+
+
+    @Test
+    public void fun0333(){
+        user.setAge(25).setName("王");
+        List<User> users = userMapper.selectByCondition(user);
+
+        users.forEach(System.out::println);
+
+
+    }
 }
