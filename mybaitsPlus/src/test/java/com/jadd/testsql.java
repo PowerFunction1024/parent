@@ -70,4 +70,12 @@ public class testsql {
         System.out.println("1111111111");
         System.out.println("1111111111");
     }
+    @Test
+    public void fun0666(){
+        System.out.println("parent 测试版本回退提交一");
+        System.out.println("1111111111");
+        System.out.println("1111111111");
+        System.out.println("1111111111");
+        System.out.println("1111111111");
+    }
 }
