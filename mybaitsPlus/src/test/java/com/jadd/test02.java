@@ -27,14 +27,4 @@ public class test02 {
         BeanUtils.copyProperties(users,al);
         System.out.println(al);
     }
-    @Test
-    public void fun03(){
-        User u1 = new User().setName("zs").setAge(78).setId(45);
-        User u2 = new User().setName("zs").setAge(78).setId(45);
-        User u3 = new User().setName("zs").setAge(78).setId(45);
-        ArrayList<User> users = Lists.newArrayList(u1, u2, u3);
-        ArrayList<User02> al = new ArrayList();
-        BeanUtils.copyProperties(users,al);
-        System.out.println(al);
-    }
 }
