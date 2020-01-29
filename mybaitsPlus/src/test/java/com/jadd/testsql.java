@@ -76,11 +76,5 @@ public class testsql {
         System.out.println("1111111111");
     }
 
-    @Test
-    public void fun0888(){
-        System.out.println("parent 测试版本回退提交222");
-        System.out.println("1111111111");
-        System.out.println("1111111111");
-        System.out.println("1111111111");
-    }
+
 }
