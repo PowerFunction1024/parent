@@ -135,6 +135,7 @@ public class test02 {
     public void fun011(){
 
         System.out.println("clone--1");
+        System.out.println("clone--2");
     }
 
 
