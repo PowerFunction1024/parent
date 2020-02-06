@@ -136,6 +136,9 @@ public class test02 {
 
 
         System.out.println("test版本回退");
+        System.out.println("test版本回退--clone");
+
+
     }
 
 
