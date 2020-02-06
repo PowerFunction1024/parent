@@ -134,7 +134,7 @@ public class test02 {
     @Test
     public void fun011(){
 
-    
+        System.out.println("clone--1");
     }
 
 
