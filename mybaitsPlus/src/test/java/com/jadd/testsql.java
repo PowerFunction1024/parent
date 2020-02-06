@@ -38,43 +38,9 @@ public class testsql {
     public void fun02(){
     user.setAge(25).setName("王");
         List<User> users = userMapper.selectByCondition(user);
-
         users.forEach(System.out::println);
-
-
     }
 
-
-    @Test
-    public void fun0333(){
-        System.out.println("1111111111");
-        System.out.println("1111111111");
-
-        System.out.println("1111111111");
-        System.out.println("1111111111");
-        System.out.println("1111111111");
-    }
-    @Test
-    public void fun0444(){
-        System.out.println("1111111111");
-        System.out.println("1111111111");
-        System.out.println("1111111111");
-        System.out.println("1111111111");
-        System.out.println("1111111111");
-    }
-    @Test
-    public void fun0555(){
-        System.out.println("clone 测试版本回退");
-        System.out.println("1111111111");
-        System.out.println("1111111111");
-        System.out.println("1111111111");
-        System.out.println("1111111111");
-    }
-    @Test
-    public void fun0666(){
-        System.out.println("parent 测试版本回退提交一");
-        System.out.println("1111111111");
-    }
 
 
 }

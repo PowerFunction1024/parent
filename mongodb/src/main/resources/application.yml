@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/jadd?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+  data:
+    mongodb:
+      database: test
+      host: 127.0.0.1
+
+# Mybatis-Plus 配置
+mybatis-plus:
+  mapper-locations: classpath:com/jadd/mapper/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.jadd.been
+  global-config:
+    id-type: 1  #0:数据库ID自增   1:用户输入id
+    db-column-underline: false
+    refresh-mapper: true
+  configuration:
+  #开启驼峰命名法
+    map-underscore-to-camel-case: true
+    cache-enabled: false #配置的缓存的全局开关
+    lazyLoadingEnabled: true #延时加载的开关
+    multipleResultSetsEnabled: true #开启延时加载，否则按需加载属性
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#logging:
+#  config: classpath:logback-spring.xml
+#  level:
+#    com.jadd: debug #打印sql语句,调试用

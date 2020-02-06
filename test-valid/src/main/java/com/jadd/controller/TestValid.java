@@ -17,21 +17,11 @@ import javax.validation.Valid;
 @RequestMapping("/user")
 public class TestValid {
     @PostMapping
-    public User create (@RequestBody @Valid User user) {
+    public User create(@RequestBody @Valid User user) {
         System.out.println(user.getId());
         System.out.println(user.getPassword());
         user.setId("1");
         return user;
     }
 
-    @PostMapping
-    public User create02 (@RequestBody @Valid User user) {
-
-
-
-        System.out.println(user.getId());
-        System.out.println(user.getPassword());
-        user.setId("1");
-        return user;
-    }
 }

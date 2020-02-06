@@ -35,7 +35,6 @@ public class Test01 {
         User user = new User();
         user.setAge(25).setName("王");
         List<User> users = userMapper.selectByCondition(user);
-
         return  users;
     }
 

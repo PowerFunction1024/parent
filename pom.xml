@@ -12,6 +12,7 @@
         <module>mybaitsPlus</module>
         <module>easypoi</module>
         <module>test-valid</module>
+        <module>mongodb</module>
     </modules>
 
     <parent>

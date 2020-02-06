@@ -19,6 +19,7 @@ public class test02 {
 
     @Test
     public void fun02(){
+        String json="";
         User u1 = new User().setName("zs").setAge(78).setId(45);
         User u2 = new User().setName("zs").setAge(78).setId(45);
         User u3 = new User().setName("zs").setAge(78).setId(45);
