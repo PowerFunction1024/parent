@@ -22,7 +22,6 @@ public class User {
     @DecimalMax(value = "10",message = "不能大于10")
     private BigDecimal price;
 
-
     @Future(message = "必须是一个将来的日期")
     private Date day;
 }

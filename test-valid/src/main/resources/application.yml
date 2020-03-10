@@ -4,5 +4,12 @@ spring:
     url: jdbc:mysql://localhost:3306/jadd?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: root
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  cache:
+    redis:
+      cache-null-values: false
+      time-to-live: 60s
 
 
