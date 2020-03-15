@@ -141,7 +141,7 @@ public class test02 {
         System.out.println("dev");
     }
     @Test
-    public void fun01(){
+    public void fun0113(){
 
         System.out.println("clone--1");
         System.out.println("clone--2");
