@@ -140,6 +140,15 @@ public class test02 {
         System.out.println("fu--11-dev-master");
         System.out.println("dev");
     }
+    @Test
+    public void fun01(){
+
+        System.out.println("clone--1");
+        System.out.println("clone--2");
+        System.out.println("fu--10");
+        System.out.println("fu--11-dev-master");
+        System.out.println("dev");
+    }
 
 
     
