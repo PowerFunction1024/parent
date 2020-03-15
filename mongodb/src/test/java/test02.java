@@ -143,14 +143,8 @@ public class test02 {
     @Test
     public void fun01134440(){
 
-        System.out.println("clone--2");
-        System.out.println("fu--10");
-        System.out.println("fu--11-dev-master");
-        System.out.println("dev");
-        System.out.println("dev");
-        System.out.println("dev");
-        System.out.println("dev");
-        System.out.println("dev");
+
+
     }
 
 
