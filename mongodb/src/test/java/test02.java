@@ -193,7 +193,6 @@ public class test02 {
     }
     @Test
     public void fun011344dddddev01dev010101(){
-
         System.out.println("clone--2");
         System.out.println("fu--10");
 
