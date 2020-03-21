@@ -208,7 +208,7 @@ public class test02 {
 
     }
     @Test
-    public void fun011344dddddev01devclone05(){
+    public void fun011344dddddev01devclone06(){
         System.out.println("clone--2");
         System.out.println("fu--10");
 
