@@ -115,18 +115,5 @@ public class test {
         BasicDBObject filter = new BasicDBObject("dname", "测试部门22");
         dept.deleteOne(filter);
     }
-    @Test
-    public void fun055555555(){
-
-
-        BasicDBObject filter = new BasicDBObject("dname", "测试部门22");
-        dept.deleteOne(filter);
-    }
-    @Test
-    public void fun6666666(){
-
-
-        BasicDBObject filter = new BasicDBObject("dname", "测试部门22");
-        dept.deleteOne(filter);
-    }
+   
 }
