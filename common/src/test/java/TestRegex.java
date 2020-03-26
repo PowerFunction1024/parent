@@ -31,6 +31,5 @@ public class TestRegex {
         //使用Match实例获得信息，进行其他的操作
         String result = matcher.replaceAll(str2);
         System.out.println(result);
-
     }
 }
