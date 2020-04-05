@@ -13,4 +13,12 @@ public class TestStringUtils {
         System.out.println(StringUtils.isEmpty(s));
     }
 
+    @Test
+    public void fun02(){
+        String v="中";
+        byte[] bytes = v.getBytes();
+        System.out.println(org.assertj.core.util.Arrays.asList(bytes));
+
+
+    }
 }
