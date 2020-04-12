@@ -1,6 +1,7 @@
 import com.jadd.Application;
 import com.jadd.been.dept;
 import com.jadd.dao.DeptRepository;
+import org.bson.Document;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -119,13 +121,31 @@ public class test02 {
 
         Query query = query(where("_id").is("test"));
         Update update = Update.update("title", "MongoTemplate").set("money", 100);
+        //dept.class这里也可以写集合的名字,,这里写了 类名.class  主要是 类上有注解@Document(collection = "dept")
         mongoTemplate.updateMulti(query, update, dept.class);
 
     }
     @Test
     public void fun010(){
 
-        Query query = query(where("_id").is("test")).addCriteria(where("money").is(100));
+        Query query = query(where("_id").is("5941f2bac1bc86928f4de49b")).addCriteria(where("dname").is("办公室"));
+        Document queryObject = query.getQueryObject();
+        Update update = Update.update("title", "MongoTemplate").set("money", 101);
+        mongoTemplate.updateMulti(query, update, dept.class);
+
+    }
+    //获取到查询条件
+    @Test
+    public void fun011(){
+        Query query = query(where("_id").is("5941f2bac1bc86928f4de49b")).addCriteria(where("dname").is("办公室"));
+        Criteria criteria = where("_id").is("5941f2bac1bc86928f4de49b").and("dname").is("办公室");
+        Document criteriaObject = criteria.getCriteriaObject();
+        //获取对应查询对象的查询条件   Document{{_id=5941f2bac1bc86928f4de49b, dname=办公室}}
+        System.out.println(criteriaObject);
+        System.out.println("=================");
+        //获取对应查询对象的查询条件    Document{{_id=5941f2bac1bc86928f4de49b, dname=办公室}}
+        Document queryObject = query.getQueryObject();
+        System.out.println(queryObject);
         Update update = Update.update("title", "MongoTemplate").set("money", 101);
         mongoTemplate.updateMulti(query, update, dept.class);
 
