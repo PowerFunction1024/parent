@@ -128,10 +128,19 @@ public class test02 {
     @Test
     public void fun010(){
 
-        Query query = query(where("_id").is("5941f2bac1bc86928f4de49b")).addCriteria(where("dname").is("办公室"));
+        Query query = query(where("_id").is("5941f2bac1bc86928f4de49b11")).addCriteria(where("dname").is("办公室"));
         Document queryObject = query.getQueryObject();
-        Update update = Update.update("title", "MongoTemplate").set("money", 101);
+        Update update = Update.update("title", "MongoTemplate").set("money1", 101);
         mongoTemplate.updateMulti(query, update, dept.class);
+
+    }
+    @Test
+    public void fun010_1(){
+
+        Query query = query(where("_id").is("5941f2bac1bc86928f4de49b11")).addCriteria(where("dname").is("办公室"));
+        Document queryObject = query.getQueryObject();
+        Update update = Update.update("title", "MongoTemplate").set("money1", 101);
+        mongoTemplate.upsert(query, update, dept.class);
 
     }
     //获取到查询条件
@@ -150,6 +159,8 @@ public class test02 {
         mongoTemplate.updateMulti(query, update, dept.class);
 
     }
+
+
 
 }
 
