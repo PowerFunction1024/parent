@@ -19,7 +19,7 @@ import java.util.Map;
 
 /**
  * @author : _xu_
- * @desc : 测试通用mapper的使用
+ * @desc : TODO
  * @date : 2020/1/9
  */
 @RestController

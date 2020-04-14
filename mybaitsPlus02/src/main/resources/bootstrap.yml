@@ -1,0 +1,4 @@
+ACTIVE PROFILE: sdev
+spring:
+  profiles:
+    active: ${ACTIVE PROFILE:default}
