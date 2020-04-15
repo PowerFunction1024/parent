@@ -13,6 +13,8 @@
         <module>easypoi</module>
         <module>test-valid</module>
         <module>mongodb</module>
+        <module>mq-comsumer</module>
+        <module>mq-producer</module>
     </modules>
 
     <parent>
