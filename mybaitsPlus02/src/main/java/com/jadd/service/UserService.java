@@ -12,7 +12,7 @@ import java.util.List;
  */
 public interface UserService extends IService<User>{
 
-     User test01();
+     User test01_1();
 
      List<User> test02();
 }

@@ -21,7 +21,7 @@ import java.util.Map;
 public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements UserService {
 
     @Override
-    public User test01() {
+    public User test01_1() {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("id", 1087982257332887553L);
         List<User> users = baseMapper.selectList(queryWrapper);
