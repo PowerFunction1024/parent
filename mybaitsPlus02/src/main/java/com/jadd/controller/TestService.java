@@ -20,15 +20,16 @@ public class TestService {
 
     @Resource
     private UserService userService;
+
     @GetMapping("/testService01")
     public List<User> testService01(){
-         userService.test01();
+         userService.test01_1();
         return  null;
     }
 
     @GetMapping("/testService02")
     public List<User> testService02(){
-         userService.test02();
+        userService.test02();
         return  null;
     }
 
