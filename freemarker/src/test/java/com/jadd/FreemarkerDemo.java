@@ -17,6 +17,7 @@ import java.util.Map;
 public class FreemarkerDemo {
     @Test
     public void helloWord() throws IOException, TemplateException {
+        //创建配置实例
         Configuration cfg = new Configuration(Configuration.VERSION_2_3_28);
         //指定模板文件的来源
         String path = FreemarkerDemo.class.getClassLoader().getResource("template").getPath();
