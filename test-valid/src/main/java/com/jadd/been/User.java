@@ -1,6 +1,7 @@
 package com.jadd.been;
 
 import lombok.Data;
+import lombok.experimental.Accessors;
 
 import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.Future;
@@ -14,8 +15,12 @@ import java.util.Date;
  * @date : 2020/1/15
  */
 @Data
+@Accessors(chain = true)
 public class User {
     private String id;
+
+    private  String name;
+
     @NotNull(message = "密码不能为空")
     private String password;
 
