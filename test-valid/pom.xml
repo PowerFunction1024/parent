@@ -35,6 +35,23 @@
             <artifactId>jasypt-spring-boot-starter</artifactId>
             <version>2.1.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.1</version>
+        </dependency>
+
+        <!--
+        把第三方jar包打到了本地仓库命令
+        mvn install:install-file -DgroupId=com.aspose -DartifactId=aspose-words -Dversion=14.9.0 -Dpackaging=jar -Dfile=D:/aspose-words-14.9.0-jdk16.jar
+        打完之后POM就可以引用了
+        -->
+        <dependency>
+            <groupId>com.aspose</groupId>
+            <artifactId>aspose-words</artifactId>
+            <version>14.9.0</version>
+        </dependency>
+
 
     </dependencies>
 
