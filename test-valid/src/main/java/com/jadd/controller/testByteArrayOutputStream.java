@@ -21,6 +21,7 @@ public class testByteArrayOutputStream {
             System.out.println(available);
             byte[] bytes = new byte[is.available()];
             System.out.println(bytes.length);
+
             is.read(bytes);
 
 
