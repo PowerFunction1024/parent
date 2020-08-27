@@ -15,6 +15,7 @@
         <module>mongodb</module>
         <module>mq-comsumer</module>
         <module>mq-producer</module>
+        <module>rabbitmq_demo</module>
     </modules>
 
     <parent>
