@@ -40,13 +40,14 @@
             <version>9.1.6</version>
         </dependency>
     </dependencies>
-<!--    <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                     <mainClass>com.Application</mainClass>　　&lt;!&ndash; 你的主类全路径 &ndash;&gt;
+                     <mainClass>com.jadd.Application</mainClass>　　<!-- 你的主类全路径 -->
+                    <skip>true</skip>
                 </configuration>
                 <executions>
                      <execution>
@@ -56,8 +57,46 @@
                      </execution>
                  </executions>
              </plugin>
+            <!--主jar包把BOOT-INF里面classes里面的东西放到了外层目录,然后把依赖拿出了jar包,保存到savelib-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.1.1</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <!-- jar包存放位置 -->
+                            <outputDirectory>${project.build.directory}/savelib</outputDirectory>
+                            <overWriteReleases>false</overWriteReleases>
+                            <overWriteSnapshots>false</overWriteSnapshots>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+
+
          </plugins>
-     </build>-->
+
+
+
+     </build>
+
+   <!-- <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>-->
 
 
 </project>
