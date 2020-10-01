@@ -2,9 +2,9 @@ package com.jadd;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.util.StringUtils;
 
 /**
  * @author : _xu_
@@ -14,6 +14,18 @@ import org.springframework.util.StringUtils;
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class test01 {
+
+    @Value("${aa.bb}")
+    private String bb;
+
+    @Test
+    public void fun01(){
+        System.out.println(
+                bb
+        );
+
+
+    }
 
 
 }

@@ -16,6 +16,7 @@
         <module>mq-comsumer</module>
         <module>mq-producer</module>
         <module>rabbitmq_demo</module>
+        <module>activity_learn</module>
     </modules>
 
     <parent>
