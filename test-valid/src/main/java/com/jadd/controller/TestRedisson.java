@@ -38,10 +38,10 @@ public class TestRedisson {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            //if (getLock){
-            //    rLock.unlock();
-            //    log.info("释放锁");
-            //}
+            if (getLock){
+                rLock.unlock();
+                log.info("释放锁");
+            }
         }
 
 
