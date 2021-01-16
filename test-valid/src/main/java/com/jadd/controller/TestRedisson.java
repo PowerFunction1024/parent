@@ -43,8 +43,6 @@ public class TestRedisson {
                 log.info("释放锁");
             }
         }
-
-
     }
 
 }
