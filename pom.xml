@@ -17,6 +17,7 @@
         <module>mq-producer</module>
         <module>rabbitmq_demo</module>
         <module>activity_learn</module>
+        <module>testitext</module>
     </modules>
 
     <parent>
