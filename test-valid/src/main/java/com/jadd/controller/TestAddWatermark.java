@@ -52,15 +52,13 @@ public class TestAddWatermark {
             Color color = new Color(0, 0, 0);
             g.setFont(font);
             g.setColor(color);
-            //设置要渲染的水印文字位置规则 和 透明度
+            //图片合成，透明度处理
             g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, alpha));
             //g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP, alpha)); 用于不是透明的图片时
             //传参是倾斜的弧度
             g.rotate(Math.toRadians(degree));
             //文本抗锯齿
             g.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
-            //边缘抗锯齿
-            g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
             JLabel label = new JLabel(waterMarkContent);
             FontMetrics fontMetrics = label.getFontMetrics(font);
@@ -105,8 +103,6 @@ public class TestAddWatermark {
             g2.setPaint(Color.black);
             //文本抗锯齿
             g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
-            //边缘抗锯齿
-            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
             g2.drawString("2021-02-03-zhongguo-深圳", 300, 30);
             g2.dispose();
 
