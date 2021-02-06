@@ -100,7 +100,9 @@ public class TestAddWatermark {
             Font font2 = new Font("宋体", Font.BOLD, 30);
             Graphics2D g2 = (Graphics2D) bufImg.getGraphics();
             g2.setFont(font2);
-            g2.setPaint(Color.black);
+            //setColor 和 setPaint 效果是一样的
+            g2.setColor(new Color(0,0,0));
+            //g2.setPaint(Color.black);
             //文本抗锯齿
             g2.setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING, RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
             g2.drawString("2021-02-03-zhongguo-深圳", 300, 30);
