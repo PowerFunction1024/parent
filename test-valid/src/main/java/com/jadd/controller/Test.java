@@ -25,7 +25,7 @@ public class Test {
             };
         }.start();
 
-        System.out.println("主线程---------");
+        System.out.println("主线程---- -----");
     }  
  
     public void insert(Thread thread) {
